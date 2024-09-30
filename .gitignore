@@ -1,0 +1,72 @@
+# .NET
+bin/
+obj/
+
+# Maui specific
+.platforms/
+bin/
+obj/
+*.userprefs
+# Mac Catalyst
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio
+.vscode/
+.vs/
+.idea/
+
+# JetBrains Rider
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Xamarin specific
+*.apk
+*.ap_(arm|x86)/
+*.ap_/
+
+# iOS build artifacts
+*.ipa
+*.app
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Android
+.gradle
+local.properties
+.android/
+caches/
+captures/
+.externalNativeBuild/
+
+# Logs and databases
+*.log
+*.tlog
+*.pdb
+*.db
+*.sqlite
+
+# Packages
+*.nupkg
+*.snupkg
+.packages/
+
+# NuGet
+*.nuget/
+.nuget/
+
+# Backup files
+*~
+\#*\#
+*.swp
+*.bak
+*.tmp
+*.orig

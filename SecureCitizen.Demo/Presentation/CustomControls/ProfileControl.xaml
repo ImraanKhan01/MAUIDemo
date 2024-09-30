@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureCitizen.Demo.Presentation.CustomControls.ProfileControl">
+                <Grid >
+                             <Grid.RowDefinitions>
+                                 <RowDefinition Height="350"/>
+                             </Grid.RowDefinitions>
+                             <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*"/>
+                             </Grid.ColumnDefinitions>
+                             <Border Grid.Row="0" HeightRequest="160" 
+                                     WidthRequest="160"
+                                     StrokeShape="RoundRectangle 80,80,80,80"
+                                     HorizontalOptions="Center"
+                                        VerticalOptions="Start"
+                                     StrokeThickness="0"
+                                     Margin="0,0,0,0">
+                                 <Border.Shadow>
+                                     <Shadow Brush="Black"
+                                             Offset="0,5"
+                                             Radius="10"
+                                             Opacity="0.3" />
+                                 </Border.Shadow>
+                                 <Image
+                                     x:Name="profileimg"
+                                     Aspect="AspectFit"
+                                     Source="fake_profile"
+                  
+                                     HeightRequest="160"
+                                     WidthRequest="160"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Center" />
+                             </Border>
+                             <Border x:Name="profiletile" Grid.Row="0" HeightRequest="230" ZIndex="-1"
+                                     StrokeShape="RoundRectangle 20,20,20,20"
+                                     BackgroundColor="#e28743" Opacity="0.7"
+                                     HorizontalOptions="Fill"
+                                     VerticalOptions="Center"
+                                     Padding="25,60,25,25"
+                                     StrokeThickness="0"
+                                     Margin="0,100,0,0">
+                                 <Border.Shadow>
+                                     <Shadow Brush="Black"
+                                             Offset="0,5"
+                                             Radius="20"
+                                             Opacity="0.6" />
+                                 </Border.Shadow>
+                                 <VerticalStackLayout>
+                                     <Label x:Name="username" Text="Jane" TextColor="Black" FontSize="30"/>
+                                     <ScrollView>
+                                         <Label x:Name="description" Text="Enjoys long walks on the beach and tax evasion. A firm believer in Kanye West and subscribes to the notion that the earth is flat. Adds her milk before her cereal." TextColor="Black" LineBreakMode="WordWrap"/>
+                                     </ScrollView>
+                                    
+                                 </VerticalStackLayout>
+
+                             </Border>
+                         </Grid>
+</ContentView>

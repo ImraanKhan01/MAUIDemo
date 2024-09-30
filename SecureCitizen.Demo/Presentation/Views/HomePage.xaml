@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SecureCitizen.Demo.Presentation.CustomControls"
+             x:Class="SecureCitizen.Demo.Presentation.Views.HomePage" Shell.NavBarIsVisible="false">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20,20">
+                <ImageButton Source="logout.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="End"  Command="{Binding LogoutCommand}"/>
+                     <VerticalStackLayout
+                Padding="0,70"
+                Spacing="25">
+               
+       
+             <controls:ProfileControl UserName="{Binding Name}" Description="{Binding Description}" ProfileImage="fake_profile"></controls:ProfileControl>
+
+              
+                <FlexLayout   Direction="Row"  VerticalOptions="StartAndExpand"
+                              AlignItems="Start" 
+                              JustifyContent="SpaceBetween">
+                    <controls:MenuTileControl Caption="SCAN a QR code" Icon="scan.png" TapCommand="{Binding GoToScannerCommand}"/>
+                    <controls:MenuTileControl Caption="CALL Api" Icon="api.png" TapCommand="{Binding CallApiCommand}" />
+                </FlexLayout>
+            </VerticalStackLayout>
+            </VerticalStackLayout>
+       
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

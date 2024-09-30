@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureCitizen.Demo.Presentation.CustomControls.MenuTileControl"  x:Name="tileView">
+    <Border HorizontalOptions="Center" x:Name="tileBackground" Grid.ColumnSpan="1"   StrokeThickness="0"  Margin="0,0,0,0"
+            StrokeShape="RoundRectangle 20,20,20,20"
+      
+            Padding="10,5"
+    >
+        <Border.Shadow>
+            <Shadow Brush="Black"
+                    Offset="0,5"
+                    Radius="10"
+                    Opacity="0.5" />
+        </Border.Shadow>
+
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+            
+                <ColumnDefinition Width="130"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="40"/>
+      
+            </Grid.RowDefinitions>
+            <Image x:Name="icon" Source="scan" WidthRequest="80" BackgroundColor="Transparent" VerticalOptions="Center" Grid.Row="0" />
+            <Label LineBreakMode="WordWrap" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" Grid.Row="1" TextColor="#757575" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  x:Name="boldFirstWord"  Text="SCAN " TextColor="{StaticResource Primary}" FontAttributes="Bold"  FontSize="14"/>
+                        <Span  x:Name="lbl"  Text="a licence disc"  FontSize="14">
+         
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                        
+        </Grid>
+
+
+                
+
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Source={x:Reference tileView}, Path=TapCommand}"/>
+
+        </Border.GestureRecognizers>
+
+    </Border>
+</ContentView>
